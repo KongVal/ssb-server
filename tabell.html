@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Befolkningstall</title>
+</head>
+<body>
+    <h1>Befolkningstall</h1>
+    <form id="dataForm">
+        <label for="year">År:</label>
+        <select id="year" name="year">
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+        </select>
+        <label for="kommune">Kommuner:</label>
+        <select id="kommune" name="kommune" multiple> <!--Hold inne 'Ctrl' for å velge flere-->
+            <option value="1505">Molde</option>
+            <option value="1506">Kristiansund</option>
+            <option value="1560">Tingvoll</option>
+        </select>
+        <button type="submit">Hent Data</button>
+    </form>
+    <p>Sammenligning av befolkningstall for følgende kommuner:</p>
+    <p id="valgteKommuner"></p>
+    <table>
+        <thead>
+            <tr>
+                <th>Average</th>
+                <th>Median</th>
+                <th>Maximum</th>
+                <th>Minimum</th>
+            </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+    </table>
+
+    <script src="/tabell_script.js"></script>
+</body>
+</html>
